@@ -1,0 +1,8 @@
+Observer pattern is one of the behavioral design patterns.
+
+It is useful when you are interested in the state of an object, and want to get notified for any updates.
+
+Observer: watch state changes
+Subject: object being watched
+
+Java provides java.util.Observable (class)/ java.util.Observer (interface)
