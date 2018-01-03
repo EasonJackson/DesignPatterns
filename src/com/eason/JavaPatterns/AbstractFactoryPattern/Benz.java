@@ -12,6 +12,6 @@ public class Benz extends Car {
     }
     @Override
     void driving() {
-
+        System.out.println("Benz is on the way.");
     }
 }
