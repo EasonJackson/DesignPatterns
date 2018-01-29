@@ -1,0 +1,7 @@
+/out
+.DS_Store
+.idea/
+DesignPatterns.iml
+src/.DS_Store
+src/com/.DS_Store
+src/com/eason/.DS_Store
