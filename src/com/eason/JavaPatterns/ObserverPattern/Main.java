@@ -6,11 +6,11 @@ package com.eason.JavaPatterns.ObserverPattern;
 public class Main {
 
     public static void main(String[] args) {
-        MySubject myTopic = new MySubject();
+        NYTimes myTopic = new NYTimes();
 
-        Observer o1 = new MyTopicSubscriber("Obj1");
-        Observer o2 = new MyTopicSubscriber("Obj2");
-        Observer o3 = new MyTopicSubscriber("Obj3");
+        Observer o1 = new MyTopicObserver("Obj1");
+        Observer o2 = new MyTopicObserver("Obj2");
+        Observer o3 = new MyTopicObserver("Obj3");
 
         myTopic.register(o1).register(o2).register(o3);
 

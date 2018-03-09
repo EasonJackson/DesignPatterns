@@ -6,14 +6,14 @@ import java.util.List;
 /**
  * Created by easonjackson on 12/25/17.
  */
-public class MySubject implements Subject {
+public class NYTimes implements Subject {
 
     private List<Observer> observers;
     private String message;
     private boolean changed;
     private  final Object MUTEX = new Object();
 
-    public MySubject() {
+    public NYTimes() {
         this.observers = new ArrayList<>();
     }
 

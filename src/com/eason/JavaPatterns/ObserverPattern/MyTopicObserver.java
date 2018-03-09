@@ -3,12 +3,12 @@ package com.eason.JavaPatterns.ObserverPattern;
 /**
  * Created by easonjackson on 12/25/17.
  */
-public class MyTopicSubscriber implements Observer {
+public class MyTopicObserver implements Observer {
 
     private String name;
     private Subject topic;
 
-    public MyTopicSubscriber(String name) {
+    public MyTopicObserver(String name) {
         this.name = name;
     }
 
