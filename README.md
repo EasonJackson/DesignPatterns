@@ -40,6 +40,21 @@ A design pattern learning memo.
 ### Creational
 
 #### Singleton Pattern
+
+Singleton pattern allows instatiation of only one instance of a class in the JVM.
+
+- Eager initialization
+Using ```private static final Singleton instance``` and ```private Constructor()``` can prevent instatiating another instance.
+Using ```public getInstance() {return instance;}``` allows retriving the same instance every time it is needed.
+
+- Static block initialization
+- Lazy Initialization
+- Thread Safe Singleton
+- Bill Pugh Singleton Implementation
+- Using Reflection to destroy Singleton Pattern
+- Enum Singleton
+- Serialization and Singleton
+
 #### Factory Pattern
 #### Abstract Factory Pattern
 #### Builder Pattern
