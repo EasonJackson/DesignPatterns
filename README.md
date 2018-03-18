@@ -45,9 +45,9 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
 
 - Eager initialization
 
-Using ```private static final Singleton instance``` and ```private Constructor()``` can prevent instatiating another instance.
+    Using ```private static final Singleton instance``` and ```private Constructor()``` can prevent instatiating another instance.
 
-Using ```public getInstance() {return instance;}``` allows retriving the same instance every time it is needed.
+    Using ```public getInstance() {return instance;}``` allows retriving the same instance every time it is needed.
 
 - Static block initialization
 - Lazy Initialization
@@ -62,6 +62,8 @@ Using ```public getInstance() {return instance;}``` allows retriving the same in
 #### Builder Pattern
 #### Prototype Pattern
 
+---
+
 ### Structural
 
 #### Adapter Pattern
@@ -71,6 +73,8 @@ Using ```public getInstance() {return instance;}``` allows retriving the same in
 #### Facade Pattern
 #### Bridge Pattern
 #### Decorator Pattern
+
+---
 
 ### Behavioral
 
