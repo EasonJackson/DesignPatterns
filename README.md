@@ -50,12 +50,37 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
     Using ```public getInstance() {return instance;}``` allows retriving the same instance every time it is needed.
 
 - Static block initialization
+	
+	Both eager and static block initializations create a new private of the class during the loading stage. For static block initialization, it add an opportunity for exception handling during the initialiation of the instance.
+
 - Lazy Initialization
+
+	Eager and static block initialize the instance before using it. Opposite to this, lazy initialization creates the instance right before some program needs it. It is implemented just by moving the ```new Constructor()``` into the ```getInstance()``` method. The first time it checks whether the instance is ```null``` and then create the instance. Later it will return the already created instance.
+
 - Thread Safe Singleton
+
+	Simply one can just add ```synchronized``` to the ```getInstance()``` method. The performance is reduced by the sychronized block.
+
 - Bill Pugh Singleton Implementation
+
+	Bill Pugh singleton uses a private static inner class to hold the singleton instance.
+
 - Using Reflection to destroy Singleton Pattern
+
+	Using reflection, one can modify the accessability of constructor ```constructor.setAccessible(true)```.
+
 - Enum Singleton
-- Serialization and Singleton
+
+	To solve problems associated with reflection, try to use Enum to provide singleton. Enum hides constructor from clients, and is globly accessible. Enum does not imply lazy initialation.
+
+- Serialization and Deserialization
+
+	Override ```readResolve()``` method.
+
+- Clonable
+
+	Override ```clone()``` method. ```clone()``` method throws ```CloneNotSupportedException```
+
 
 #### Factory Pattern
 #### Abstract Factory Pattern
