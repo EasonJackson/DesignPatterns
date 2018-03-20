@@ -81,8 +81,20 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
 
 	Override ```clone()``` method. ```clone()``` method throws ```CloneNotSupportedException```
 
+[Example of singleton](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Singleton)
 
 #### Factory Pattern
+
+Factory pattern transfers the resposibility of instatiation new instances from the clients' end, to the factory class. Factory pattern usually contains a method ```getProduct(Params)```, which return an instance required by the ```Params```.
+
+Factory pattern is especially useful in a few cases. When there is a lot of subclasses and it would be very inconvinient to have every class ready on the clients' end. In such case, using factory pattern allows the clients to generate different subclasses instance with an uniform api ```getProduct(Params)```. The method could also be designed as a static method, as ```Factory.getProduct(Params)```.
+
+In another case when the designer wants to hide the implementation details of constructors from the clients, it would also be very convinient to use factory pattern to fulfill the requirement. Using a ```private``` modifier on methods other than ```getProduct()``` will encapsulate the details of implementations of instatiation of concrete instances.
+
+In a third situation when the initialization of an instance may involve initializing other objects. These creating methods would be trivial to clients, and factory method could help abstract the creation process.
+
+[Example of factory pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/FactoryPattern)
+
 #### Abstract Factory Pattern
 #### Builder Pattern
 #### Prototype Pattern
