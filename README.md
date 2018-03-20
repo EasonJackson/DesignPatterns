@@ -35,7 +35,6 @@ A design pattern learning memo.
 ---
 ## Details
 
----
 
 ### Creational
 
@@ -83,6 +82,8 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
 
 [Example of singleton](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Singleton)
 
+---
+
 #### Factory Pattern
 
 Factory pattern transfers the resposibility of instatiation new instances from the clients' end, to the factory class. Factory pattern usually contains a method ```getProduct(Params)```, which return an instance required by the ```Params```. The goal of a factory pattern is NOT to call ```new Constructor()``` on initializing of each object, instead using the uniform interface.
@@ -97,11 +98,13 @@ In a third situation when the initialization of an instance may involve initiali
 
 Some implementations in Java classes:
 
-    1. java.util.Calendar, ResourceBundle and NumberFormat ```getInstance()``` methods uses Factory pattern.
+1. java.util.Calendar, ResourceBundle and NumberFormat ```getInstance()``` methods uses Factory pattern.
     
-    2. ```valueOf()``` method in wrapper classes like Boolean, Integer etc.
+2.  ```valueOf()``` method in wrapper classes like Boolean, Integer etc.
 
 [Example of factory pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/FactoryPattern)
+
+---
 
 #### Abstract Factory Pattern
 
@@ -110,6 +113,8 @@ Abstract factory pattern is similar to the factory pattern. The abstract factory
 Abstract factory uses an interface ```interface AbstractFactory``` with an abstracte method  ```AbstractProductClass getProduct()```. All the concrete factories must implement the ```AbstractFactory```, which means they can (and have to) override and implement their own creation methods. The return product must be a subclass instance of ```AbstractProductClass```.
 
 [Example of abstract factory pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/AbstractFactoryPattern)
+
+---
 
 #### Builder Pattern
 
@@ -120,10 +125,13 @@ Considering the telescoping constructor pattern, the constructor requires a grea
 For instance, a constructor ```MyConstructor(int p1, int p2, int p3, int p4)``` takes four ```int``` type parameters. When creating an instance with such a constructor, it will be hard for a client to understand or remember what is the meaning of each param. A miss-ordered input will not cause trouble for the compiler, but could raise issues during runtime.
 
 A alternative is to use JavaBeans. It allows inconsistency in the order of setting up all the attributes of an instance. However it comes with another disadvantage that
-> A JavaBean maybe in an inconsistent state partway through its construction <<Effective Java>>.
+> A JavaBean maybe in an inconsistent state partway through its construction <Effective Java, by Joshua Bloch>.
+
 Not all the attributes are set at the same time when the instance is initialized, and immutability of objects is not guaranteed.
 
 Builder pattern is preferably implemented with a static nested class ```Builder```.
+
+---
 
 #### Prototype Pattern
 
