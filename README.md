@@ -143,7 +143,11 @@ Builder pattern is preferably implemented with a static nested class ```Builder`
 
 #### Prototype Pattern
 
-Prototype pattern aims to make it easy for object creation. When the cost of initialization of an instance is large, and the
+Prototype pattern aims to make it easy for object creation. When the cost of initializating an instance is large, and all the instances have the same or a similar property, prototype can quickly duplicate the original instance. It works on classes that implements ```Clonable``` interface in Java.
+
+A shallow copy or a deep copy of the prototype instance are optional in the pattern, depend on how the implementation should work. For most cases where an "individual" object is required, a deep copy is necessary to avoid corrupting data. However a deep copy will apparently cost more memory in that case.
+
+[Example of prototype pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Prototype)
 
 ---
 
