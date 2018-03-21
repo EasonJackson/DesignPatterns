@@ -80,6 +80,10 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
 
 	Override ```clone()``` method. ```clone()``` method throws ```CloneNotSupportedException```
 
+Some implementations in Java frameworks:
+
+1. Spring beans are by default singletons (per application)
+
 [Example of singleton](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Singleton)
 
 ---
@@ -129,11 +133,17 @@ A alternative is to use JavaBeans. It allows inconsistency in the order of setti
 
 Not all the attributes are set at the same time when the instance is initialized, and immutability of objects is not guaranteed.
 
-Builder pattern is preferably implemented with a static nested class ```Builder```.
+Builder pattern is preferably implemented with a static nested class ```Builder```. It includes all the required attributes in the constructor of ```Builder```, while for all the other optional attributes, it provides set method with a self-explained signature.  Finally the nested ```Builder``` class also has a method ```build()``` which returns the same instance it generates.
+
+```Builder``` class has a public modifier allowing client program to call it. The constructor is therefore set private to prevent accessment from client.
+
+[Example of builer pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Builder)
 
 ---
 
 #### Prototype Pattern
+
+Prototype pattern aims to make it easy for object creation. When the cost of initialization of an instance is large, and the
 
 ---
 
