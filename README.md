@@ -154,6 +154,19 @@ A shallow copy or a deep copy of the prototype instance are optional in the patt
 ### Structural
 
 #### Adapter Pattern
+
+Adapter pattern aims to glue two unrelated interfaces together so that classes and methods in one interface can be converted for usage in another interface. Adapter is necessary between two ready-built interfaces whose methods are not easy to be modified.
+
+Adapter is defined as an interface, in which all the prototype methods are defined (as contracts between two interfaces it tries to connect). It can also be defined as an abstract class, however a class adapter cannot extend two classes at the same time.
+
+There are two different implementations of adapter pattern:
+1. Class adapter, a class extends one of the interfaces/classes, and implements the adapter interfaces meanwhile.
+2. Object adapter, a class implements the adapter interfaces, and contains an instance as its component of the interfaces/classes being glued. 
+
+One of the most common example is the plug-in converter.
+
+[Example of adapter patter](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Adapter)
+
 #### Composite Pattern
 #### Proxy Pattern
 #### Flyweight Pattern
