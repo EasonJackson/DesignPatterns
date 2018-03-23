@@ -161,13 +161,36 @@ Adapter is defined as an interface, in which all the prototype methods are defin
 
 There are two different implementations of adapter pattern:
 1. Class adapter, a class extends one of the interfaces/classes, and implements the adapter interfaces meanwhile.
-2. Object adapter, a class implements the adapter interfaces, and contains an instance as its component of the interfaces/classes being glued. 
+2. Object adapter, a class implements the adapter interfaces, and contains an instance as its component of the interfaces/classes being glued.
 
 One of the most common example is the plug-in converter.
 
 [Example of adapter patter](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Adapter)
 
+---
+
 #### Composite Pattern
+
+Composite patterns represents a part-whole hierarchy. When a collection of components can compose a whole unit, and there are lots of common behaviors of these components, a composite is used to combine those components. The unified structure can also be treated as "one" component.
+
+In a composite pattern there usually exist three object:
+
+1. A base component, which is either an interface or an abstract class used to represent the basic common behaviors in the composite.
+2. A leaf component, as the unit element in the composite structure. A leaf component does not have any components.
+3. Composite, which is consisted of leaf components and other components. A composite implements or extends the base component class/interface, which makes it possible to have a nested composite as its component.
+
+- Traverse with an iterator.
+
+- Transparency vs safety.
+
+    Methods defined in the interface will be inherited by all subclass, and this could be dangerous for some subclass who do not need nor can provide proper behaviors.
+    
+    Methods defined only in composites will remove the risky behavior of the leaf components. In this case transparency is traded off with safety.
+    
+[Example of composite pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Composite)
+    
+---
+
 #### Proxy Pattern
 #### Flyweight Pattern
 #### Facade Pattern
