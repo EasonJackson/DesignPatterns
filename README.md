@@ -204,6 +204,23 @@ Well defined, a proxy pattern
 ---
 
 #### Flyweight Pattern
+
+Flyweight pattern is design for reduce the memory consumption new objects in a program.
+
+Three typical cases that require flyweight pattern:
+
+1. The number of objects need to be created in a program is huge.
+2. Object together can consume large memory.
+3. The time complexity of initializing a new object is high.
+
+Flyweight pattern try to reuse the ready objects that is maintained in the data structures, as cached objects. Make the objects sharable could reduce the memory cost in a program, in such a case the intrinsic attributes of these objects are the same, while the extrinsic attributes are subjected to changes.
+
+Flyweight pattern is important for memory resource limited device, such as mobile devices and embedded systems. One example of using flyweight pattern is the string pool in Java. Java maintains a colletion of string literals in heap, containing all the literals that are created in the program. Creating new string references straightly with "" will be pointing to the existing object in the heap, if not applicable, JVM will create a new one and put it into the heap then let the reference pointing to it. As strings in Java are immutable objects, sharing of them between different processes/threads will not generated risky behaviors. Opposite to this case, Java also provides another optional of creating string objects that are not in the string pool but are treated the same as other objects. This is done through calling ```new String()``` constructor.
+
+[Example of flyweight pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Flyweight)
+
+---
+
 #### Facade Pattern
 #### Bridge Pattern
 #### Decorator Pattern
