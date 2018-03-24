@@ -192,6 +192,17 @@ In a composite pattern there usually exist three object:
 ---
 
 #### Proxy Pattern
+
+Well defined, a proxy pattern
+
+ > Provide a surrogate or placeholder for another object to control access to it.
+ 
+ It constraints the privilage of clients' program to excute some methods: admin privilige versus user privilige.
+
+[Example of proxy pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/ProxyPattern)
+
+---
+
 #### Flyweight Pattern
 #### Facade Pattern
 #### Bridge Pattern
