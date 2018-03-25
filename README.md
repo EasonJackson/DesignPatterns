@@ -222,6 +222,11 @@ Flyweight pattern is important for memory resource limited device, such as mobil
 ---
 
 #### Facade Pattern
+
+[Example of facade pattern]()
+
+---
+
 #### Bridge Pattern
 #### Decorator Pattern
 
