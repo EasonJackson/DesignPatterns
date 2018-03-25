@@ -20,5 +20,8 @@ public class Main {
         System.out.println("si == si1 ? " + (si == si1));
         System.out.println("The instance for si: " + si.toString());
         System.out.println("The instance for si1: " + si1.toString());
+
+        SingletonAutoGen sAuto = SingletonAutoGen.getInstance();
+        System.out.println(sAuto.getId());
     }
 }
