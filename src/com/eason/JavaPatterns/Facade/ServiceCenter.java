@@ -10,16 +10,16 @@ public class ServiceCenter {
         customFeedback = new CustomFeedback();
     }
 
-    public void tackleCustomerTrouble(Trouble trouble) {
-        if (trouble == Trouble.REFILLMENT) {
-            refillmentService.tackle(trouble);
-        } else if (trouble == Trouble.RETURN) {
-            returnService.tackle(trouble);
-        } else if (trouble == Trouble.FEEDBACK) {
-            customFeedback.tackle(trouble);
-        } else {
-            return;
-        }
+    public void tackleRefillmentTrouble(Trouble trouble) {
+        refillmentService.tackle(trouble);
+    }
+
+    public void tackleReturnTrouble(Trouble trouble) {
+        returnService.tackle(trouble);
+    }
+
+    public void tackleCustomerFeedbackTrouble(Trouble trouble) {
+        customFeedback.tackle(trouble);
     }
 
     public enum Trouble {
