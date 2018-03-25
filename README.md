@@ -223,7 +223,15 @@ Flyweight pattern is important for memory resource limited device, such as mobil
 
 #### Facade Pattern
 
-[Example of facade pattern]()
+Facade pattern provides a wrapping up interface of all the methods in the entire subsystem. It serves like a service center where the receptionist can hook you up to the target department you are looking for. 
+
+Facade pattern tries not to hide the details of behaviors from the clients. It is an optional design pattern from the aspect of clients, but in practice is a good optional for clients to access all the methods when the subsystem gets growing over complex.
+
+To subsystem, the facade object will look very much like a switcher, and it should not rely on the dependency of facade interface at all.
+
+The facade would also be on top of a hierarchical interfaces.
+
+[Example of facade pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Facade)
 
 ---
 
