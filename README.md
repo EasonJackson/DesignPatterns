@@ -40,17 +40,17 @@ A design pattern learning memo.
 
 #### Singleton Pattern
 
-Singleton pattern allows instatiation of only one instance of a class in the JVM.
+Singleton pattern allows instantiation of only one instance of a class in the JVM.
 
 - Eager initialization
 
-    Using ```private static final Singleton instance``` and ```private Constructor()``` can prevent instatiating another instance.
+    Using ```private static final Singleton instance``` and ```private Constructor()``` can prevent instantiating another instance.
 
-    Using ```public getInstance() {return instance;}``` allows retriving the same instance every time it is needed.
+    Using ```public getInstance() {return instance;}``` allows retrieving the same instance every time it is needed.
 
 - Static block initialization
 	
-	Both eager and static block initializations create a new private of the class during the loading stage. For static block initialization, it add an opportunity for exception handling during the initialiation of the instance.
+	Both eager and static block initializations create a new private of the class during the loading stage. For static block initialization, it add an opportunity for exception handling during the initialization of the instance.
 
 - Lazy Initialization
 
@@ -58,7 +58,7 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
 
 - Thread Safe Singleton
 
-	Simply one can just add ```synchronized``` to the ```getInstance()``` method. The performance is reduced by the sychronized block.
+	Simply one can just add ```synchronized``` to the ```getInstance()``` method. The performance is reduced by the synchronized block.
 
 - Bill Pugh Singleton Implementation
 
@@ -66,17 +66,17 @@ Singleton pattern allows instatiation of only one instance of a class in the JVM
 
 - Using Reflection to destroy Singleton Pattern
 
-	Using reflection, one can modify the accessability of constructor ```constructor.setAccessible(true)```.
+	Using reflection, one can modify the accessibility of constructor ```constructor.setAccessible(true)```.
 
 - Enum Singleton
 
-	To solve problems associated with reflection, try to use Enum to provide singleton. Enum hides constructor from clients, and is globly accessible. Enum does not imply lazy initialation.
+	To solve problems associated with reflection, try to use Enum to provide singleton. Enum hides constructor from clients, and is globally accessible. Enum does not imply lazy initialization.
 
 - Serialization and Deserialization
 
 	Override ```readResolve()``` method.
 
-- Clonable
+- Cloneable
 
 	Override ```clone()``` method. ```clone()``` method throws ```CloneNotSupportedException```
 
@@ -90,11 +90,11 @@ Some implementations in Java frameworks:
 
 #### Factory Pattern
 
-Factory pattern transfers the resposibility of instatiation new instances from the clients' end, to the factory class. Factory pattern usually contains a method ```getProduct(Params)```, which return an instance required by the ```Params```. The goal of a factory pattern is NOT to call ```new Constructor()``` on initializing of each object, instead using the uniform interface.
+Factory pattern transfers the responsibility of instantiation new instances from the clients' end, to the factory class. Factory pattern usually contains a method ```getProduct(Params)```, which return an instance required by the ```Params```. The goal of a factory pattern is NOT to call ```new Constructor()``` on initializing of each object, instead using the uniform interface.
 
-Factory pattern is especially useful in a few cases. When there is a lot of subclasses and it would be very inconvinient to have every class ready on the clients' end. In such case, using factory pattern allows the clients to generate different subclasses instance with an uniform api ```getProduct(Params)```. The method could also be designed as a static method, as ```Factory.getProduct(Params)```.
+Factory pattern is especially useful in a few cases. When there is a lot of subclasses and it would be very inconvenient to have every class ready on the clients' end. In such case, using factory pattern allows the clients to generate different subclasses instance with an uniform api ```getProduct(Params)```. The method could also be designed as a static method, as ```Factory.getProduct(Params)```.
 
-In another case when the designer wants to hide the implementation details of constructors from the clients, it would also be very convinient to use factory pattern to fulfill the requirement. Using a ```private``` modifier on methods other than ```getProduct()``` will encapsulate the details of implementations of instatiation of concrete instances.
+In another case when the designer wants to hide the implementation details of constructors from the clients, it would also be very convenient to use factory pattern to fulfill the requirement. Using a ```private``` modifier on methods other than ```getProduct()``` will encapsulate the details of implementations of instantiation of concrete instances.
 
 In a third situation when the initialization of an instance may involve initializing other objects. These creating methods would be trivial to clients, and factory method could help abstract the creation process.
 
@@ -106,6 +106,8 @@ Some implementations in Java classes:
     
 2.  ```valueOf()``` method in wrapper classes like Boolean, Integer etc.
 
+Strategy pattern is very commonly combined with factory pattern: based on the input params the factory can return the correct strategy clients' want.
+
 [Example of factory pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/FactoryPattern)
 
 ---
@@ -114,7 +116,7 @@ Some implementations in Java classes:
 
 Abstract factory pattern is similar to the factory pattern. The abstract factory pattern abstract the concrete factories with a uniform API from them.
 
-Abstract factory uses an interface ```interface AbstractFactory``` with an abstracte method  ```AbstractProductClass getProduct()```. All the concrete factories must implement the ```AbstractFactory```, which means they can (and have to) override and implement their own creation methods. The return product must be a subclass instance of ```AbstractProductClass```.
+Abstract factory uses an interface ```interface AbstractFactory``` with an abstract method  ```AbstractProductClass getProduct()```. All the concrete factories must implement the ```AbstractFactory```, which means they can (and have to) override and implement their own creation methods. The return product must be a subclass instance of ```AbstractProductClass```.
 
 [Example of abstract factory pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/AbstractFactoryPattern)
 
@@ -135,7 +137,7 @@ Not all the attributes are set at the same time when the instance is initialized
 
 Builder pattern is preferably implemented with a static nested class ```Builder```. It includes all the required attributes in the constructor of ```Builder```, while for all the other optional attributes, it provides set method with a self-explained signature.  Finally the nested ```Builder``` class also has a method ```build()``` which returns the same instance it generates.
 
-```Builder``` class has a public modifier allowing client program to call it. The constructor is therefore set private to prevent accessment from client.
+```Builder``` class has a public modifier allowing client program to call it. The constructor is therefore set private to prevent access from client.
 
 [Example of builer pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Builder)
 
@@ -143,7 +145,7 @@ Builder pattern is preferably implemented with a static nested class ```Builder`
 
 #### Prototype Pattern
 
-Prototype pattern aims to make it easy for object creation. When the cost of initializating an instance is large, and all the instances have the same or a similar property, prototype can quickly duplicate the original instance. It works on classes that implements ```Clonable``` interface in Java.
+Prototype pattern aims to make it easy for object creation. When the cost of initialing an instance is large, and all the instances have the same or a similar property, prototype can quickly duplicate the original instance. It works on classes that implements ```Clonable``` interface in Java.
 
 A shallow copy or a deep copy of the prototype instance are optional in the pattern, depend on how the implementation should work. For most cases where an "individual" object is required, a deep copy is necessary to avoid corrupting data. However a deep copy will apparently cost more memory in that case.
 
@@ -197,7 +199,7 @@ Well defined, a proxy pattern
 
  > Provide a surrogate or placeholder for another object to control access to it.
  
- It constraints the privilage of clients' program to excute some methods: admin privilige versus user privilige.
+ It constraints the privilege of clients' program to execute some methods: admin privilege versus user privilege.
 
 [Example of proxy pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/ProxyPattern)
 
@@ -215,7 +217,7 @@ Three typical cases that require flyweight pattern:
 
 Flyweight pattern try to reuse the ready objects that is maintained in the data structures, as cached objects. Make the objects sharable could reduce the memory cost in a program, in such a case the intrinsic attributes of these objects are the same, while the extrinsic attributes are subjected to changes.
 
-Flyweight pattern is important for memory resource limited device, such as mobile devices and embedded systems. One example of using flyweight pattern is the string pool in Java. Java maintains a colletion of string literals in heap, containing all the literals that are created in the program. Creating new string references straightly with "" will be pointing to the existing object in the heap, if not applicable, JVM will create a new one and put it into the heap then let the reference pointing to it. As strings in Java are immutable objects, sharing of them between different processes/threads will not generated risky behaviors. Opposite to this case, Java also provides another optional of creating string objects that are not in the string pool but are treated the same as other objects. This is done through calling ```new String()``` constructor.
+Flyweight pattern is important for memory resource limited device, such as mobile devices and embedded systems. One example of using flyweight pattern is the string pool in Java. Java maintains a collection of string literals in heap, containing all the literals that are created in the program. Creating new string references straightly with "" will be pointing to the existing object in the heap, if not applicable, JVM will create a new one and put it into the heap then let the reference pointing to it. As strings in Java are immutable objects, sharing of them between different processes/threads will not generated risky behaviors. Opposite to this case, Java also provides another optional of creating string objects that are not in the string pool but are treated the same as other objects. This is done through calling ```new String()``` constructor.
 
 [Example of flyweight pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Flyweight)
 
@@ -230,6 +232,8 @@ Facade pattern tries not to hide the details of behaviors from the clients. It i
 To subsystem, the facade object will look very much like a switcher, and it should not rely on the dependency of facade interface at all.
 
 The facade would also be on top of a hierarchical interfaces.
+
+Factory pattern is used together with facade pattern to provide clients a better interface.
 
 [Example of facade pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Facade)
 
