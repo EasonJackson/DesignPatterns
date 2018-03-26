@@ -240,6 +240,19 @@ Factory pattern is used together with facade pattern to provide clients a better
 ---
 
 #### Bridge Pattern
+
+Bridge pattern is designed for
+
+> Decouple an abstraction from its implementation so that the two can vary independently.
+
+When there are hierarchies of implementations in both interfaces, the combinations of concrete classes can grow exponentially fast. In such a case the maintaining of each implementation can be ridiculously difficult.
+
+To deal with that case, it is very common to have one of the interface maintaining a protected instance variable of the other interface, which will serves as a concrete implementation instance later. In this way a "bridge" is built between such two interfaces.
+
+[Example of bridge pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Bridge)
+
+---
+
 #### Decorator Pattern
 
 ---
