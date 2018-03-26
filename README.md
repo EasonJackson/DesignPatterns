@@ -281,6 +281,6 @@ Decorator pattern is used a lot in Java IO classes, such as ```FileReader```, ``
 #### Iterator Pattern
 #### Memento Pattern
 
-## Authors
+## Author
 
 * **EasonJackson** - *@2017* 
