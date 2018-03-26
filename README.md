@@ -18,11 +18,11 @@ A design pattern learning memo.
     - [Flyweight Pattern](#flyweight-pattern)
     - [Facade Pattern](#facade-pattern)
     - [Bridge Pattern](#bridge-pattern)
-    - [Decorator Pattern](@decorator-pattern)
+    - [Decorator Pattern](#decorator-pattern)
 - Behavioral Design Patterns
     - [Template Method Pattern](#template-method-pattern)
     - [Mediator Pattern](#mediator-pattern)
-    - [Chain of Responsibility Pattern](#chain-of-resposibility-pattern)
+    - [Chain of Responsibility Pattern](#Chain-of-Responsibility-Pattern)
     - [Observer Pattern](#observer-pattern)
     - [Strategy Pattern](#strategy-pattern)
     - [Command Pattern](#command-pattern)
@@ -139,7 +139,7 @@ Builder pattern is preferably implemented with a static nested class ```Builder`
 
 ```Builder``` class has a public modifier allowing client program to call it. The constructor is therefore set private to prevent access from client.
 
-[Example of builer pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Builder)
+[Example of builder pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Builder)
 
 ---
 
@@ -254,6 +254,16 @@ To deal with that case, it is very common to have one of the interface maintaini
 ---
 
 #### Decorator Pattern
+
+A decorator adds on features to or change the behavior of a basic class at runtime. This provides the power of boosting a class without modifying its code.
+
+Decorator pattern is implemented as a composite or inheritance of the root type class. In the class definition, a decorator holds an instance of the basic class. It wraps up the method of the basic class via providing its new method with the same signature, which makes the clients' program think they are using the same method as the basic type.
+
+As a decorator itself implements the root type, the instance it generates and returns will have overridden methods of the super class type. A decorator also can be an interface with many different concrete decorator implementations.
+
+Decorator pattern is used a lot in Java IO classes, such as ```FileReader```, ```BufferedReader```.
+
+[Example of decorator pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Decorator) 
 
 ---
 
