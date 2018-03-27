@@ -271,7 +271,14 @@ Decorator pattern is used a lot in Java IO classes, such as ```FileReader```, ``
 
 #### Template Method Pattern
 
-[Example of template method pattern]()
+Template pattern defines the order of execution of a series of algorithms or methods. It contains an entry point where the clients' program can access from, and it wraps up all the details within a blackbox which is neither known nor usable to those clients' program.
+
+Some examples of template method in Java:
+
+- All non-abstract methods of java.io.InputStream, java.io.OutputStream, java.io.Reader and java.io.Writer.
+- All non-abstract methods of java.util.AbstractList, java.util.AbstractSet and java.util.AbstractMap.
+
+[Example of template method pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Template)
 
 ---
 
