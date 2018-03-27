@@ -283,6 +283,13 @@ Some examples of template method in Java:
 ---
 
 #### Mediator Pattern
+
+
+
+[Example of mediator pattern]()
+
+---
+
 #### Chain of Responsibility Pattern
 #### Observer Pattern
 #### Strategy Pattern
