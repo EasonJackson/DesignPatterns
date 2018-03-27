@@ -270,6 +270,11 @@ Decorator pattern is used a lot in Java IO classes, such as ```FileReader```, ``
 ### Behavioral
 
 #### Template Method Pattern
+
+[Example of template method pattern]()
+
+---
+
 #### Mediator Pattern
 #### Chain of Responsibility Pattern
 #### Observer Pattern
