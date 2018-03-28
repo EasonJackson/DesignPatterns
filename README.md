@@ -284,9 +284,15 @@ Some examples of template method in Java:
 
 #### Mediator Pattern
 
+Mediator pattern is useful for communications between different objects. Direct connecting between objects can result in a messy mesh topology of networks, and modifications of connection media on one of the objects can lead to many other modifications of behaviors in other connecting objects. This is against the design rule of >open for extension, close for modification.
 
+Mediator can serve as a centralized switcher between media. It also facilitate different transmission requirements of media, for example, broadcast, multicast and unicast.
 
-[Example of mediator pattern]()
+Java Message Service (JMS) uses Mediator pattern along with Observer pattern to allow applications to subscribe and publish data to other applications.
+
+On the other hand, mediator is not mainly for the purpose to decouple the dependency between objects. The increase in number of mediator objects itself will lead to maintenance problems.
+
+[Example of mediator pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Mediator)
 
 ---
 
