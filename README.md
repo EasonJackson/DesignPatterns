@@ -318,9 +318,13 @@ Java provides a built-in class of observer, a class ```java.util.Observable``` a
 
 #### Strategy Pattern
 
+When we need to deal with different situations via different algorithms, it is often wiser to encapsulate the algorithm as an independent class instead of directly code out the algorithm within the logic object. In such a way that the strategy pattern is defined.
 
+The strategy pattern contains a hierarchy of root interface and leaf node of concrete implementations of strategies. As in the main functions the parameter is declared as a root object, different implementations of strategy can be inserted based on requirements. 
 
-[Example of strategy pattern]()
+Strategy is often combined with factory patterns. Clients' program will generate requests for specific situation handlers. Strategy factory will response a correct strategy to the client based on the input parameters.
+
+[Example of strategy pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Strategy)
 
 ---
 
