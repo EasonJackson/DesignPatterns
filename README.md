@@ -307,6 +307,15 @@ One of a typical chain flow in Java is the exception handling mechanism. More sp
 ---
 
 #### Observer Pattern
+
+Observer pattern is mostly used in subscribers. A subject has a list of subscribers and a subscriber may register with a few subjects. When there is a change in the state of a subject, all the subscribers registered with the subject with get notified of the updates.
+
+Java provides a built-in class of observer, a class ```java.util.Observable``` and an interface ```java.util.Observer```. However they are not very widely adopted since they only provide very simply functionalities.
+
+[Example of observer pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/ObserverPattern)
+
+---
+
 #### Strategy Pattern
 #### Command Pattern
 #### State Pattern
