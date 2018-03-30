@@ -297,6 +297,15 @@ On the other hand, mediator is not mainly for the purpose to decouple the depend
 ---
 
 #### Chain of Responsibility Pattern
+
+Chain of responsibility pattern is widely used in dealing with request processing. Request handlers are usually chained in order to provide a sequence of request handling mechanism. A chain on the sequence determines if it should process the request and generate responses, or should further pass the request to the next chain object.
+
+One of a typical chain flow in Java is the exception handling mechanism. More specific exceptions are caught on the top of the chain and more general exceptions are caught later.
+
+[Example of chain of responsibility pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/ChainOfResponsibility)
+
+---
+
 #### Observer Pattern
 #### Strategy Pattern
 #### Command Pattern
