@@ -317,6 +317,13 @@ Java provides a built-in class of observer, a class ```java.util.Observable``` a
 ---
 
 #### Strategy Pattern
+
+
+
+[Example of strategy pattern]()
+
+---
+
 #### Command Pattern
 #### State Pattern
 #### Visitor Pattern
