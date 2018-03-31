@@ -329,6 +329,17 @@ Strategy is often combined with factory patterns. Clients' program will generate
 ---
 
 #### Command Pattern
+
+Command pattern encapsulates a client request as an object, in which way it decouples the end of generating the request and the other end of processing the request.
+
+A command interface usually contains a method ```execute()```, and it will have several concrete implementations that override the method and provide ways of invoking the method. In a concrete implementation of command interface, it also commonly to have one or several receiver instances that actually process the command.
+
+A method parameter from client end can be simply a string, as a method call. In Java, it can also access the member method without holding an instance, with the help of reflection.
+
+[Example of command pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Command)
+
+---
+
 #### State Pattern
 #### Visitor Pattern
 #### Interpreter Pattern
