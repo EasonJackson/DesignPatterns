@@ -341,6 +341,13 @@ A method parameter from client end can be simply a string, as a method call. In 
 ---
 
 #### State Pattern
+
+State pattern is used for dynamic behaviors according to the current state within the class.
+
+[Example of state pattern]()
+
+---
+
 #### Visitor Pattern
 #### Interpreter Pattern
 #### Iterator Pattern
