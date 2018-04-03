@@ -342,7 +342,12 @@ A method parameter from client end can be simply a string, as a method call. In 
 
 #### State Pattern
 
-State pattern is used for dynamic behaviors according to the current state within the class.
+State pattern is used for dynamic behaviors according to the current state within the class. It is important to use this pattern for two major purpose:
+
+1. State changes cause method behavior changes
+2. Method invoking shall lead to interchanges between states, similar to an automata.
+
+Most typical example: vending machine, ATM.
 
 [Example of state pattern]()
 
