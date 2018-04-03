@@ -355,6 +355,21 @@ Most typical example: vending machine, ATM.
 
 #### Visitor Pattern
 
+Visitor pattern enables the low coupling design of classes and their additional operations implementations after these classes are already built. This design patterns fulfills the requirement of open/close rules.
+
+The algorithm is encapsulated in the visitor class. The original class usually contains an ```accept()``` method in the root class of the hierarchy to accept the visit from the external visitors, and return the visit result. The visitor class usually contains a ```visit()``` method in the root class of the hierarchy, which takes an instance of that class of being visited, and then return the visit results. 
+
+A commonly used structure of accept-visit method:
+
+```
+ResultType accept(Visitor visitor) {
+    return visitor.visit(this);
+}
+```
+
+[Example of visitor pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Visitor)
+
+---
 
 #### Interpreter Pattern
 #### Iterator Pattern
