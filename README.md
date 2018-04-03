@@ -349,11 +349,13 @@ State pattern is used for dynamic behaviors according to the current state withi
 
 Most typical example: vending machine, ATM.
 
-[Example of state pattern]()
+[Example of state pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/State)
 
 ---
 
 #### Visitor Pattern
+
+
 #### Interpreter Pattern
 #### Iterator Pattern
 #### Memento Pattern
