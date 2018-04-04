@@ -372,7 +372,13 @@ ResultType accept(Visitor visitor) {
 ---
 
 #### Interpreter Pattern
+
+---
 #### Iterator Pattern
+
+[Example of iterator pattern]()
+
+---
 #### Memento Pattern
 
 ## Author
