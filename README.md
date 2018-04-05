@@ -376,7 +376,9 @@ ResultType accept(Visitor visitor) {
 ---
 #### Iterator Pattern
 
-[Example of iterator pattern]()
+Iterator provides a way of traversing all the elements in a collection, without exposing the traversing details to clients' program. It is highly coupled with its collection class to prevent access from other collection classes.
+
+[Example of iterator pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Iterator)
 
 ---
 #### Memento Pattern
