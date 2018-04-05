@@ -362,8 +362,25 @@ The algorithm is encapsulated in the visitor class. The original class usually c
 A commonly used structure of accept-visit method:
 
 ```
-ResultType accept(Visitor visitor) {
-    return visitor.visit(this);
+class Item {
+    .
+    .
+    .
+    
+    ResultType accept(Visitor visitor) {
+        return visitor.visit(this);
+    }
+}
+
+class Visitor {
+    .
+    .
+    .
+    ResultType visit(Item item) {
+        ResutlType result = new ResultType();
+        // Algorithm logic
+        return result
+    }
 }
 ```
 
