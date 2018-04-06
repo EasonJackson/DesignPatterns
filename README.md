@@ -390,6 +390,16 @@ class Visitor {
 
 #### Interpreter Pattern
 
+Interpreter is an expression translator. It parses a well defined token into the correct grammar used by the language that the interpreter is represented.
+
+Additional points of interpreter:
+
+1. Interpreter can use State pattern to define parsing context.
+2. Syntax tree is a Composite pattern, and generally Visitor can be used to separate logic from class itself.
+3. EOF can be a common symbol to terminate the expression.
+
+[Example of interpreter pattern](https://github.com/EasonJackson/DesignPatterns/tree/master/src/com/eason/JavaPatterns/Interpreter)
+
 ---
 #### Iterator Pattern
 
@@ -399,6 +409,8 @@ Iterator provides a way of traversing all the elements in a collection, without 
 
 ---
 #### Memento Pattern
+
+[Example of memento pattern]()
 
 ## Author
 
