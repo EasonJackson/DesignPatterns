@@ -410,6 +410,10 @@ Iterator provides a way of traversing all the elements in a collection, without 
 ---
 #### Memento Pattern
 
+Memento pattern is used when a state of an object needs to be saved and restored later. It provides protections to the state of an object from being access from the outside of the object.
+
+The protection is achieved through a private inner class which can not be visited from other classes.
+
 [Example of memento pattern]()
 
 ## Author
